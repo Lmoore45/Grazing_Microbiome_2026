@@ -1,4 +1,4 @@
-# Microbes, Minerals, and Managment: What Controls Mineral-Associated Organic Carbon in Semi-Arid Rangelands?
+# Microbial Communities Function as Ecological Indicators of Mineral-Associated Organic Carbon in Semi-Arid Rangelands
 *Companion code repository for manuscript submission*
 
 This repository supports the analyses and figures described in the manuscript, providing reproducible workflows for data processing, sPLS/PLS modeling, and supplementary figure generation using microbial and environmental data.
