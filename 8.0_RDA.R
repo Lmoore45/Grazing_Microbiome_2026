@@ -14,7 +14,7 @@ metadata <- read_csv("1.1_Metadata.csv")
 ##### Step 3: Define Predictor Groups
 # Microbiome predictors
 microbiome_predictors <- metadata %>%
-  dplyr::select(Sample, Richness_16s, Evenness_16s, Shannons_16s, Biomass, FB_Ratio_Normal,
+  dplyr::select(Sample, Richness_16s, Evenness_16s, Shannons_16s, Biomass, FB_Ratio,
                 Richness_ITS, Evenness_ITS, Shannons_ITS, vip_sum_16S_maoc_relab, vip_sum_ITS_maoc_relab) %>%
   mutate(across(-Sample, as.numeric))
 
