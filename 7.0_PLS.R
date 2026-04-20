@@ -24,7 +24,7 @@ metadata <- read_csv("1.1_Metadata.csv")
 combined_predictors <- metadata %>% 
   dplyr::select(Sample, Richness_16s, Evenness_16s, Shannons_16s, 
                 Evenness_ITS, Shannons_ITS, Richness_ITS, Biomass, 
-                FB_Ratio_Normal, vip_sum_16S_maoc_relab, vip_sum_ITS_maoc_relab, 
+                FB_Ratio, vip_sum_16S_maoc_relab, vip_sum_ITS_maoc_relab, 
                 pom_c, pom_n, c_n_ratio, pH, percent_clay, percent_sand, percent_silt, 
                 Adaptive_Score, mean_annual_temp, mean_annual_precip, 
                 PET_mm_day, radiation, Latitude, Longitude) %>% 
