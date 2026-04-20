@@ -15,7 +15,7 @@ Select and clean variables for correlation analysis
 ```{r}
 combined_predictors <- metadata %>%
   dplyr::select(
-    Sample,
+    Sample, depth_num,
     Richness_16s, Evenness_16s, Shannons_16s,
     Evenness_ITS, Shannons_ITS, Richness_ITS,
     Biomass, FB_Ratio_Normal,
