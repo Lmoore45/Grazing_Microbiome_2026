@@ -236,7 +236,7 @@ data_long <- metadata %>%
                       "maom_c" = "MAOC",
                       "total_c" = "SOC"),
     Fraction = factor(Fraction, levels = c("SOC", "MAOC", "POC")),
-    Practice = factor(Practice, levels = c("Prescriptive", "Adaptive"))
+    Practice = factor(Practice, levels = c("Conventional", "Adaptive"))
   )
 
 # Calculate p-values (but don't plot them)
