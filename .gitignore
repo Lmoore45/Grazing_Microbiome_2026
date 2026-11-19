@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.positai
+
+.DS_Store
+
+/Rplots.pdf
+
+/figures/
+
+/outputs/
