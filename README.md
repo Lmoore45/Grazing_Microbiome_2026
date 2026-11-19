@@ -9,7 +9,7 @@ This repository contains the R scripts and input data for analyses of microbial 
 | [`1.1_Metadata.csv`](data/1.1_Metadata.csv) | Sample IDs, soil depths, grazing categories, soil and climate measurements, and microbial community summaries |
 | [`1.2_16S_ASV_Table.csv`](data/1.2_16S_ASV_Table.csv) | Bacterial and archaeal 16S amplicon sequence variant (ASV) counts and taxonomy |
 | [`1.3_ITS_ASV_Table.csv`](data/1.3_ITS_ASV_Table.csv) | Fungal ITS ASV counts and taxonomy |
-| [`PCA_Figure3_samples.csv`](data/PCA_Figure3_samples.csv) | The 75 samples used in the Figure 3 principal component analysis |
+| [`PCA_Figure3_samples.csv`](data/PCA_Figure3_samples.csv) | Reference list of the 75 samples used in the Figure 3 principal component analysis |
 
 Raw sequencing reads are available under [NCBI BioProject PRJNA1271444](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1271444). Processed ASV tables are archived on [Zenodo](https://doi.org/10.5281/zenodo.19700145).
 
@@ -36,7 +36,7 @@ BiocManager::install("mixOmics")
 | Script | Analysis and outputs |
 | --- | --- |
 | [`Fractionation.R`](scripts/Fractionation.R) | Soil organic carbon, MAOC, and particulate organic carbon summaries and plots by ranch and soil depth |
-| [`PCA.R`](scripts/PCA.R) | Principal component analysis and biplots for Figure 3 |
+| [`PCA.R`](scripts/PCA.R) | Principal component analysis and biplots for Figure 3. Selects samples with 16S and ITS richness and complete PCA inputs after excluding the recorded outlier. |
 | [`beta-diveristy_MANTEL.R`](scripts/beta-diveristy_MANTEL.R) | 16S and ITS community composition, NMDS ordinations, and Mantel tests for Figure 4 |
 | [`sPLS.R`](scripts/sPLS.R) | Depth-adjusted sparse partial least squares (sPLS) models for 16S and ITS ASVs, with leave-one-ranch-out validation and Figure 5 panels |
 | [`Within_Depth_sPLS.R`](scripts/Within_Depth_sPLS.R) | sPLS sensitivity analysis within each soil depth |

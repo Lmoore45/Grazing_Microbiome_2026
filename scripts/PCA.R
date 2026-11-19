@@ -9,21 +9,23 @@ library(grid)        # For graphical functions
 
 
 # Load metadata
-data <- read.csv("data/1.1_Metadata.csv")
-figure3_samples <- read.csv("data/PCA_Figure3_samples.csv")$Sample
+data <- read.csv("data/1.1_Metadata.csv", na.strings = c("", "NA", "#N/A"))
 if (!("PET" %in% names(data)) && "PET_mm_day" %in% names(data)) {
   data$PET <- data$PET_mm_day
 }
 
 # Filter out the outlier and select relevant variables
 metadata <- data %>%
-  filter(Sample %in% figure3_samples) %>%
+  filter(
+    !is.na(Richness_16s),
+    !is.na(Richness_ITS),
+    Sample != "WYCO_0923_05_PR_D3_B_C03_XT"
+  ) %>%
   select(Sample, pH, total_c, maom_c, pom_c, total_n, maom_n, pom_n,
          percent_clay, percent_sand, percent_silt,
          mean_annual_temp, mean_annual_precip, PET, radiation, Location)
 
-# Remove missing values
-metadata[metadata == "#N/A"] <- NA
+# Keep rows with complete PCA inputs
 metadata <- na.omit(metadata)
 
 # Log-transform non-normally distributed variables
