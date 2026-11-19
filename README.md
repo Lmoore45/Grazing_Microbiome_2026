@@ -9,7 +9,6 @@ This repository contains the R scripts and input data for analyses of microbial 
 | [`1.1_Metadata.csv`](data/1.1_Metadata.csv) | Sample IDs, soil depths, grazing categories, soil and climate measurements, and microbial community summaries |
 | [`1.2_16S_ASV_Table.csv`](data/1.2_16S_ASV_Table.csv) | Bacterial and archaeal 16S amplicon sequence variant (ASV) counts and taxonomy |
 | [`1.3_ITS_ASV_Table.csv`](data/1.3_ITS_ASV_Table.csv) | Fungal ITS ASV counts and taxonomy |
-| [`PCA_Figure3_samples.csv`](data/PCA_Figure3_samples.csv) | Reference list of the 75 samples used in the Figure 3 principal component analysis |
 
 Raw sequencing reads are available under [NCBI BioProject PRJNA1271444](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1271444). Processed ASV tables are archived on [Zenodo](https://doi.org/10.5281/zenodo.19700145).
 
